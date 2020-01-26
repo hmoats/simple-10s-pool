@@ -3,7 +3,7 @@
 # Run the picks for each player
 # hmoats
 
-MYHOME=/home/private/git/simple-10s-pool
+MYHOME=/home/private/simple-10s-pool
 INPUT=$MYHOME/input.csv
 
 # Read in input.csv and then loop over each line and parse player's picks
@@ -21,50 +21,48 @@ do
 
 	SaveIFS=$IFS
 	IFS=$','
-	echo "================================================="
-	echo "$Player"
-	echo " "
-	echo "[Men's Draw]"
-	echo " - Men's round 16"
+	echo "### $Player"
+	echo "#### Men's Draw"
+	echo "* Men's round 16"
 	for r in $MR16
 	do
-		printf "%-20s\n" "  - $r"
+		echo "** $r"
 	done
-	echo " - Men's Quarters"
+	echo "* Men's Quarters"
 	for r in $MR8
 	do
-		printf "%-20s\n" "  - $r"
+		echo "** $r"
 	done
-	echo " - Men's Semis"
+	echo "* Men's Semis"
 	for r in $MR4
 	do
-		printf "%-20s\n" "  - $r"
+		echo "** $r"
 	done
-	echo " - Men's Finals"
+	echo "* Men's Finals"
 	for r in $MR2
 	do
-		printf "%-20s\n" "  - $r"
+		echo "** $r"
 	done
-	echo "[Women's Draw]"
-        echo " - Women's round 16"
+	echo "#### Women's Draw"
+        echo "* Women's round 16"
         for r in $WR16
         do
-                printf "%-20s\n" "  - $r"
+                echo "** $r"
         done
-        echo " - Women's Quarters"
+        echo "* Women's Quarters"
         for r in $WR8
         do
-                printf "%-20s\n" "  - $r"
+                echo "** $r"
         done
-        echo " - Women's Semis"
+        echo "* Women's Semis"
         for r in $WR4
         do
-                printf "%-20s\n" "  - $r"
+                echo "** $r"
         done
-        echo " - Women's Finals"
+        echo "* Women's Finals"
         for r in $WR2
         do
-                printf "%-20s\n" "  - $r"
+                echo "** $r"
         done
 
 	IFS=$SaveIFS
